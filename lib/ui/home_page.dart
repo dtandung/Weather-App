@@ -8,6 +8,7 @@ import 'package:intl/intl.dart';
 import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 import 'package:weatherapp/components/weather_item.dart';
 import 'package:weatherapp/constants.dart';
+import 'package:weatherapp/ui/detail_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -339,7 +340,13 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
                       GestureDetector(
-                        onTap: () => print('Tapped'),
+                        onTap: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (_) => DetailPage(
+                                    dailyForecastWeather: dailyWeatherForecast,
+                                  )),
+                        ),
                         child: Text(
                           'Forecasts',
                           style: TextStyle(
