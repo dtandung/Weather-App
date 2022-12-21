@@ -432,7 +432,7 @@ class _HomePageState extends State<HomePage> {
                                     style: TextStyle(
                                       color: _constants.greyColor,
                                       fontWeight: FontWeight.w600,
-                                      fontSize: 17,
+                                      fontSize: 15,
                                       fontFeatures: const [
                                         FontFeature.enable('sups'),
                                       ],
